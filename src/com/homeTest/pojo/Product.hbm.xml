@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.homeTest.pojo.Product" table="shoprd_product" lazy="false">
+		<id name="product_id" column="product_id">
+			<generator class="native"/>
+		</id>
+		
+		<property name="brand_id" column="brand_id"/>
+		
+		<property name="product_name" column="product_name"/>
+		
+		<property name="DESCRIPTION" column="DESCRIPTION"/>
+		
+		<property name="price" column="price"/>
+		
+		<property name="stock" column="stock"/>
+		
+		<property name="browse" column="browse"/>
+		
+		<property name="sales" column="sales"/>
+		
+		<many-to-one name="categoryThree" class="com.homeTest.pojo.CategoryThree" column="three_id"/>
+	</class>
+</hibernate-mapping>
+	
